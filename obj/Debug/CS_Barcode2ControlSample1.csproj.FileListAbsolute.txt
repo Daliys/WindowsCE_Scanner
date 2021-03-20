@@ -1,0 +1,13 @@
+D:\БИЛЕТЫ\2013-128CG-Vendord-master\HelpfulStuff\CS_Barcode2ControlSample1\bin\Debug\CS_Barcode2ControlSample1.exe.config
+D:\БИЛЕТЫ\2013-128CG-Vendord-master\HelpfulStuff\CS_Barcode2ControlSample1\bin\Debug\CS_Barcode2ControlSample1.exe
+D:\БИЛЕТЫ\2013-128CG-Vendord-master\HelpfulStuff\CS_Barcode2ControlSample1\bin\Debug\CS_Barcode2ControlSample1.pdb
+D:\БИЛЕТЫ\2013-128CG-Vendord-master\HelpfulStuff\CS_Barcode2ControlSample1\bin\Debug\Symbol.Barcode2.DesignCF35.dll
+D:\БИЛЕТЫ\2013-128CG-Vendord-master\HelpfulStuff\CS_Barcode2ControlSample1\bin\Debug\Symbol.dll
+D:\БИЛЕТЫ\2013-128CG-Vendord-master\HelpfulStuff\CS_Barcode2ControlSample1\bin\Debug\Symbol.xml
+D:\БИЛЕТЫ\2013-128CG-Vendord-master\HelpfulStuff\CS_Barcode2ControlSample1\bin\Debug\Symbol.Barcode2.DesignCF35.xml
+D:\БИЛЕТЫ\2013-128CG-Vendord-master\HelpfulStuff\CS_Barcode2ControlSample1\obj\Debug\ResolveAssemblyReference.cache
+D:\БИЛЕТЫ\2013-128CG-Vendord-master\HelpfulStuff\CS_Barcode2ControlSample1\obj\Debug\CS_Barcode2ControlSample1.Form1.resources
+D:\БИЛЕТЫ\2013-128CG-Vendord-master\HelpfulStuff\CS_Barcode2ControlSample1\obj\Debug\CS_Barcode2ControlSample1.Properties.Resources.resources
+D:\БИЛЕТЫ\2013-128CG-Vendord-master\HelpfulStuff\CS_Barcode2ControlSample1\obj\Debug\CS_Barcode2ControlSample1.csproj.GenerateResource.Cache
+D:\БИЛЕТЫ\2013-128CG-Vendord-master\HelpfulStuff\CS_Barcode2ControlSample1\obj\Debug\CS_Barcode2ControlSample1.exe
+D:\БИЛЕТЫ\2013-128CG-Vendord-master\HelpfulStuff\CS_Barcode2ControlSample1\obj\Debug\CS_Barcode2ControlSample1.pdb
