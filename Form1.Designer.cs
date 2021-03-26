@@ -36,40 +36,45 @@ namespace CS_Barcode2ControlSample1
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.timer1 = new System.Windows.Forms.Timer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.answerLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.manualEnterUserControl1 = new CS_Barcode2ControlSample1.ManualEnterUserControl();
+            this.ColorAnswerPanel = new System.Windows.Forms.Panel();
+            this.ColorAnswerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(4, 218);
+            this.buttonExit.BackColor = System.Drawing.Color.Gray;
+            this.buttonExit.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
+            this.buttonExit.Location = new System.Drawing.Point(440, 0);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(72, 20);
+            this.buttonExit.Size = new System.Drawing.Size(40, 40);
             this.buttonExit.TabIndex = 1;
-            this.buttonExit.Text = "Exit";
+            this.buttonExit.Text = "X";
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             this.buttonExit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buttonExit_KeyDown);
             // 
             // listBox1
             // 
-            this.listBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular);
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.listBox1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular);
+            this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.Location = new System.Drawing.Point(3, 3);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(204, 135);
+            this.listBox1.Size = new System.Drawing.Size(431, 110);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // statusBar1
             // 
-            this.statusBar1.Location = new System.Drawing.Point(0, 244);
+            this.statusBar1.Location = new System.Drawing.Point(0, 511);
             this.statusBar1.Name = "statusBar1";
-            this.statusBar1.Size = new System.Drawing.Size(240, 24);
+            this.statusBar1.Size = new System.Drawing.Size(478, 24);
             this.statusBar1.Text = "statusBar1";
             // 
             // listBox2
             // 
-            this.listBox2.Location = new System.Drawing.Point(207, 73);
+            this.listBox2.Location = new System.Drawing.Point(445, 149);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(30, 50);
             this.listBox2.TabIndex = 2;
@@ -84,52 +89,56 @@ namespace CS_Barcode2ControlSample1
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 149);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 359);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(62, 58);
+            this.pictureBox1.Visible = false;
             // 
-            // label1
+            // answerLabel
             // 
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
-            this.label1.Location = new System.Drawing.Point(82, 149);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 58);
-            this.label1.Text = "Готов к работе";
+            this.answerLabel.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            this.answerLabel.ForeColor = System.Drawing.Color.White;
+            this.answerLabel.Location = new System.Drawing.Point(27, 171);
+            this.answerLabel.Name = "answerLabel";
+            this.answerLabel.Size = new System.Drawing.Size(412, 139);
+            this.answerLabel.Text = "Готов к работе";
+            this.answerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.answerLabel.ParentChanged += new System.EventHandler(this.answerLabel_ParentChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(165, 218);
+            this.button1.Location = new System.Drawing.Point(100, 430);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 20);
+            this.button1.Size = new System.Drawing.Size(260, 50);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Manual";
+            this.button1.Text = "Ручной ввод";
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // manualEnterUserControl1
+            // ColorAnswerPanel
             // 
-            this.manualEnterUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.manualEnterUserControl1.Name = "manualEnterUserControl1";
-            this.manualEnterUserControl1.Size = new System.Drawing.Size(240, 143);
-            this.manualEnterUserControl1.TabIndex = 8;
+            this.ColorAnswerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.ColorAnswerPanel.Controls.Add(this.listBox1);
+            this.ColorAnswerPanel.Controls.Add(this.answerLabel);
+            this.ColorAnswerPanel.Controls.Add(this.buttonExit);
+            this.ColorAnswerPanel.Controls.Add(this.button1);
+            this.ColorAnswerPanel.Controls.Add(this.pictureBox1);
+            this.ColorAnswerPanel.Location = new System.Drawing.Point(0, 0);
+            this.ColorAnswerPanel.Name = "ColorAnswerPanel";
+            this.ColorAnswerPanel.Size = new System.Drawing.Size(480, 505);
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(240, 268);
-            this.Controls.Add(this.manualEnterUserControl1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(478, 535);
+            this.Controls.Add(this.ColorAnswerPanel);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.statusBar1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.buttonExit);
             this.Name = "Form1";
             this.Text = "IventTIS";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.Resize += new System.EventHandler(this.Form1_Resize);
+            this.ColorAnswerPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -142,9 +151,9 @@ namespace CS_Barcode2ControlSample1
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label answerLabel;
         private System.Windows.Forms.Button button1;
-        private ManualEnterUserControl manualEnterUserControl1;
+        private System.Windows.Forms.Panel ColorAnswerPanel;
     }
 }
 

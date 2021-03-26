@@ -38,6 +38,9 @@ namespace CS_Barcode2ControlSample1
         private int _fix = 0;
         private Barcode2.OnScanHandler _myScanNotifyHandler;
 
+        private Color wrongAnswerColor = Color.FromArgb(173, 0, 0);
+        private Color rightAnswerColor = Color.FromArgb(0, 173, 0);
+        private Color neutralAnswerColor = Color.FromArgb(143, 143, 143 );
 
         //private int port = 80;
         //private string server = "192.168.31.236";
@@ -93,7 +96,7 @@ namespace CS_Barcode2ControlSample1
             //int con = 0;
             InitializeComponent();
             this.listBox1.Focus();
-            manualEnterUserControl1.Hide();
+            //manualEnterUserControl1.Hide();
 
 
             /*Thread firstThread = new Thread(new ThreadStart(connNet.connect));
@@ -440,23 +443,37 @@ namespace CS_Barcode2ControlSample1
 
         public void HandleData(string scanData)
         {
-            while (listBox1.Items.Count >= 5)
+            while (listBox1.Items.Count >= 3)
             {
                 listBox1.Items.RemoveAt(0);
             }
             listBox1.Items.Add(scanData);
-            
+            //listBox1.Items[listBox1.Items.Count - 1];
+                
+
+            if (Program.manualEntryForm.Visible)
+            {
+                Program.manualEntryForm.Hide();
+                Program.mainForm.Show();
+            }
+                        
+
             connNet.response = scanData;
             Thread sendThread = new Thread(new ThreadStart(connNet.sendCode));
             sendThread.Start();
+            answerLabel.Text = "Идет проверка билета";
+            ColorAnswerPanel.BackColor = neutralAnswerColor;
+            
+
+
             listBox2.Items.Clear();
             listBox2.Items.Add("Ожидание...");
-            Bitmap MyImage;
+            //Bitmap MyImage;
             try
             {
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                MyImage = new Bitmap("\\Release\\wait.png");
-                pictureBox1.Image = (Image)MyImage;
+                //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                //MyImage = new Bitmap("\\Release\\wait.png");
+               // pictureBox1.Image = (Image)MyImage;
             }
             catch
             {
@@ -522,10 +539,11 @@ namespace CS_Barcode2ControlSample1
                     {
                         path = "\\Release\\yes.wav";
                         sp = new SoundPlayer(path);
-                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                        MyImage = new Bitmap("\\Release\\OK.png");
-                        pictureBox1.Image = (Image)MyImage;
-                        label1.Text = "Доступ разрешен";
+                        //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                        //MyImage = new Bitmap("\\Release\\OK.png");
+                        //pictureBox1.Image = (Image)MyImage;
+                        answerLabel.Text = "Доступ разрешен";
+                        ColorAnswerPanel.BackColor = rightAnswerColor;
                     }
                     else
                     {
@@ -533,21 +551,24 @@ namespace CS_Barcode2ControlSample1
                         sp = new SoundPlayer(path);
                         if (connNet.response5 == "404")
                         {
-                            MyImage = new Bitmap("\\Release\\not correct.jpg");
-                            pictureBox1.Image = (Image)MyImage;
-                            label1.Text = "Неизвестный билет";
+                            //MyImage = new Bitmap("\\Release\\not correct.jpg");
+                            //pictureBox1.Image = (Image)MyImage;
+                            answerLabel.Text = "Неизвестный билет";
+                            ColorAnswerPanel.BackColor = wrongAnswerColor;
                         }
                         if (connNet.response5 == "403")
                         {
-                            MyImage = new Bitmap("\\Release\\Zapret.png");
-                            pictureBox1.Image = (Image)MyImage;
-                            label1.Text = "Билет уже погашен";
+                           // MyImage = new Bitmap("\\Release\\Zapret.png");
+                          //  pictureBox1.Image = (Image)MyImage;
+                            answerLabel.Text = "Билет уже погашен";
+                            ColorAnswerPanel.BackColor = wrongAnswerColor;
                         }
                         if (connNet.response5 == "303")
                         {
-                            MyImage = new Bitmap("\\Release\\servererror.png");
-                            pictureBox1.Image = (Image)MyImage;
-                            label1.Text = "Потеря связи с сервером";
+                            //MyImage = new Bitmap("\\Release\\servererror.png");
+                            //pictureBox1.Image = (Image)MyImage;
+                            answerLabel.Text = "Потеря связи с сервером";
+                            ColorAnswerPanel.BackColor = wrongAnswerColor;
                         }
                     }
                     if (connNet.response != "12345")
@@ -556,8 +577,9 @@ namespace CS_Barcode2ControlSample1
                     }
                     else
                     {
-                        label1.Text = "Готов к работе";
-                        try
+                        answerLabel.Text = "Готов к работе";
+                        ColorAnswerPanel.BackColor = neutralAnswerColor;
+                       /* try
                         {
                             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                             MyImage = new Bitmap("\\Release\\OK.png");
@@ -565,7 +587,7 @@ namespace CS_Barcode2ControlSample1
                         }
                         catch
                         {
-                        }
+                        }*/
                     }
                 }
                 catch { }
@@ -578,16 +600,23 @@ namespace CS_Barcode2ControlSample1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (manualEnterUserControl1.Visible) manualEnterUserControl1.Hide();
-            else manualEnterUserControl1.Show();
-            
+            //if (manualEnterUserControl1.Visible) manualEnterUserControl1.Hide();
+            //else manualEnterUserControl1.Show();
+
+            Program.manualEntryForm.Show();
+
             //ManualEntryForm manualForm = new ManualEntryForm();
             //UserControl uc = new UserControl();
             //uc.Show();
             //manualForm.Show();
-           // manualForm.Closing += delegate { this.Show(); };
-           // this.Hide();
+            //manualForm.Closing += delegate { this.Show(); };
+            //this.Hide();
            
+        }
+
+        private void answerLabel_ParentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

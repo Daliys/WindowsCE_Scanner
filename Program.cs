@@ -7,12 +7,15 @@ namespace CS_Barcode2ControlSample1
     static class Program
     {
         public static Form1 mainForm;
+        public static ManualEntryForm manualEntryForm;
         [MTAThread]
         static void Main()
         {
             mainForm = new Form1();
-            mainForm.DoScale();
+            //mainForm.DoScale();
+            manualEntryForm = new ManualEntryForm();
             Application.Run(mainForm);
+
         }
     }
 }

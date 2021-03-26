@@ -1,0 +1,14 @@
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\bin\Release\CS_Barcode2ControlSample1.exe.config
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\bin\Release\CS_Barcode2ControlSample1.exe
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\bin\Release\CS_Barcode2ControlSample1.pdb
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\bin\Release\Interop.WMPLib.dll
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\obj\Release\Interop.WMPLib.dll
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\obj\Release\CS_Barcode2ControlSample1_GIT.csproj.ResolveComReference.cache
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\obj\Release\CS_Barcode2ControlSample1.Form1.resources
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\obj\Release\CS_Barcode2ControlSample1.ManualEnterUserControl.resources
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\obj\Release\CS_Barcode2ControlSample1.ManualEntryForm.resources
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\obj\Release\CS_Barcode2ControlSample1.Properties.Resources.resources
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\obj\Release\CS_Barcode2ControlSample1_GIT.csproj.GenerateResource.Cache
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\obj\Release\CS_Barcode2ControlSample1.exe
+C:\Users\Daliy\Desktop\Motorolla\CS_Barcode2ControlSample1_GIT\obj\Release\CS_Barcode2ControlSample1.pdb

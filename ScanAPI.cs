@@ -39,12 +39,17 @@ namespace CS_Barcode2ControlSample1
                 _myBarcode2.Config.Decoders.I2OF5.Enabled = true;
                 _myBarcode2.Config.Decoders.CODE128.Enabled = true; //
                 _myBarcode2.Config.Decoders.I2OF5.MinLength = 10;
-                _myBarcode2.Config.Decoders.I2OF5.MaxLength = 16;
+                _myBarcode2.Config.Decoders.I2OF5.MaxLength = 26;
                 _myBarcode2.Config.Decoders.I2OF5.Redundancy = true;
                 _myBarcode2.Config.Decoders.Set();
                 _myBarcode2.Config.Scanner.DecodeBeepTime = 100;
                 _myBarcode2.Config.Scanner.DecodeBeepFrequency = 4000;
                 _myBarcode2.Config.Scanner.Set();
+                
+
+               // _myBarcode2.Config.Reader.ReaderSpecific.ImagerSpecific.
+              //  _myBarcode2.Config.Read
+                    
             }
             catch (OperationFailureException ex)
             {

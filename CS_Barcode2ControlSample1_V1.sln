@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Barcode2ControlSample1_V1", "CS_Barcode2ControlSample1_V1.csproj", "{173FB59E-CA39-44D2-A2AE-A75378D5A5F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Barcode2ControlSample1_GIT", "CS_Barcode2ControlSample1_GIT.csproj", "{173FB59E-CA39-44D2-A2AE-A75378D5A5F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
